@@ -1,0 +1,36 @@
+# Custom Fields Routers
+uvdesk_form_component_custom_fields:
+    path: /custom-fields
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::loadCustomFields
+
+uvdesk_form_component_custom_fields_log:
+    path: /custom-field/log
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::viewCustomFieldLog
+
+uvdesk_form_component_custom_fields_log_xhr:
+    path: /custom-field/log-xhr
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::viewCustomFieldLogXhr
+
+uvdesk_form_component_custom_fields_xhraction:
+    path: /custom-field-xhr/{field}
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::customFieldsxhr
+    defaults:
+        field: 0
+
+uvdesk_form_component_custom_fields_reorder_action:
+    path: /custom-field/reorder
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::customFieldsReorder
+
+uvdesk_form_component_ticket_custom_fields_xhr:
+    path:     /ticket/custom-field/update
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller\CustomFieldsController::ticketCustomFieldXHR
+
+uvdesk_form_component_download_ticket_attachment:
+    path:     /ticket/download/{attachmentId}
+    controller: Webkul\UVDesk\CoreFrameworkBundle\Controller\Ticket::downloadAttachment
+    defaults:
+        attachmentId: 0
+        
+uvdesk_form_component_ticket_custom_fields_decrypt_xhr:
+    path:     /ticket/custom-field/view/{ticketId}
+    controller: UVDesk\CommunityPackages\UVDesk\FormComponent\Controller::decryptCustomFieldXHR
